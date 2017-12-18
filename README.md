@@ -1,4 +1,4 @@
-# Boman - Node.js GraphQL Framework
+# Boman Boilerplate - Node.js | GraphQL | FAST
 
 Rapid prototyping of GraphQL backend applications using Node.js.
 
@@ -30,8 +30,6 @@ or NPM:
 npm install
 ```
 
-You can find "GraphiQL" UI on the http://localhost:5050/graphiql
-
 ## Running the server
 
 You can start the server using:
@@ -45,6 +43,8 @@ or using NPM:
 ```
 npm start
 ```
+
+You can find "GraphiQL" UI on the http://localhost:5050/graphiql
 
 ## Deployment
 
