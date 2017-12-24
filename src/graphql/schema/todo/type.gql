@@ -1,8 +1,0 @@
-type Todo {
-  id: ID!
-  text: String!
-}
-
-type Query {
-  getTodos: [Todo]
-}
