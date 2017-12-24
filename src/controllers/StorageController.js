@@ -10,9 +10,9 @@ class StorageController {
     const writeFileStream = fs.createWriteStream(
       `./uploads/${generatedFilename}`
     );
+    fileStream.pipe(writeFileStream);
+    return generatedFilename;
   }
-  fileStream.pipe(writeFileStream);
-  return true;
 }
 
 export default StorageController;

@@ -11,7 +11,7 @@ type Query {
 }
 
 type Mutation {
-  uploadFile(file: Upload!): Boolean!
+  uploadFile(file: Upload!): String!
   register(name: String!, email: String!, password: String!): User!
   login(email: String!, password: String!): Boolean
   banUser(id: ID!): Boolean
