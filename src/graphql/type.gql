@@ -11,11 +11,8 @@ type Query {
 }
 
 type Mutation {
-  register(
-    name: String!
-    email: String!
-    password: String!
-  ): User!
+  uploadFile(file: Upload!): Boolean!
+  register(name: String!, email: String!, password: String!): User!
   login(email: String!, password: String!): Boolean
   banUser(id: ID!): Boolean
   logout: Boolean

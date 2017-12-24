@@ -6,19 +6,12 @@ const config = {
 
 mongoose.Promise = global.Promise;
 
-(async () => {
-  try {
-    await mongoose.connect(config.db, {
-      useMongoClient: true
-    });
-    console.log('Successfully connected to MongoDB!');
-  } catch (err) {
-    console.log(
-      'Error connecting to MongoDB:',
-      err.message
-    );
-  }
-})();
+mongoose
+  .connect(config.db, { useMongoClient: true })
+  .then(() => console.log('Connected to MongoDB!'))
+  .catch(err =>
+    console.log('Error connecting to MongoDB:', err.message)
+  );
 
 export default {
   User: require('./models/User').default
