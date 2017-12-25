@@ -10,6 +10,5 @@ applyMiddlewares(app);
 app.use(boman({ db }));
 
 app.get('/', (req, res) => res.json(req.user));
-app.listen(5050, () =>
-  console.log('server is running on port 5050')
-);
+
+app.listen(5050, () => console.log('server is running on port 5050'));

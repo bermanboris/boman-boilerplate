@@ -1,4 +1,4 @@
-import { RootController, errors } from 'boman';
+import { RootController, errors, permissions, rules } from 'boman';
 import { login } from '../middlewares/auth/local';
 
 @RootController
@@ -21,6 +21,7 @@ class AuthController {
     return true;
   }
 
+  @permissions([rules.isAuthenticated])
   getMyUser() {
     return this.models.User.findOne({ _id: this.user.id });
   }
@@ -31,6 +32,7 @@ class AuthController {
 
   logout() {
     this.req.logout();
+    this.req.session.destroy(err => console.log(err));
     return true;
   }
 

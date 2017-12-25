@@ -6,7 +6,7 @@ type User {
 
 type Query {
   getUsers: [User]
-  getMyUser: User!
+  getMyUser: User
   checkPassword(email: String!, password: String!): Boolean!
 }
 
