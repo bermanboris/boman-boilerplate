@@ -1,12 +1,19 @@
+import { pubsub } from 'boman';
+
 export default {
   Query: {
-    getUsers(parent, args, { DemoController }) {
-      return DemoController.getUsers();
+    messages(_, args, { ChatController }) {
+      return ChatController.getAllMessages();
+    },
+  },
+  Subscription: {
+    newMessage: {
+      subscribe: () => pubsub.asyncIterator('MESSAGES'),
     },
   },
   Mutation: {
-    addUser(parent, user, { DemoController }) {
-      return DemoController.addUser(user);
+    sendMessage(parent, message, { ChatController }) {
+      return ChatController.sendMessage(message);
     },
   },
 };

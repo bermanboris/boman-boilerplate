@@ -1,12 +1,16 @@
-type User {
-  name: String!
-  age: Int!
+type Message {
+  text: String!
+  user: String!
+}
+
+type Subscription {
+  newMessage: Message!
 }
 
 type Query {
-  getUsers: [User]
+  messages: [Message]!
 }
 
 type Mutation {
-  addUser(name: String!, age: Int!): [User]
+  sendMessage(user: String!, text: String!): Boolean!
 }
