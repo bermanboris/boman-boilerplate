@@ -1,4 +1,4 @@
-# Boman Boilerplate - Node.js | GraphQL | FAST
+# Boman Boilerplate - Node.js | GraphQL (Deprecated)
 
 Rapid prototyping of GraphQL backend applications using Node.js.
 
